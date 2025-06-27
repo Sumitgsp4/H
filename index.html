@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Taman 💌</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: url('https://i.postimg.cc/6Q7qHyvM/pink-heart-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #ff3399;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h2, h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      margin-top: 20px;
+    }
+
+    .envelope {
+      margin: 80px auto;
+      width: 320px;
+      height: 200px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 1s ease-in-out;
+    }
+
+    .flap {
+      width: 0;
+      height: 0;
+      border-left: 160px solid transparent;
+      border-right: 160px solid transparent;
+      border-bottom: 100px solid #fff;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      transition: transform 1s ease-in-out;
+      transform-origin: top center;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    }
+
+    .body {
+      width: 320px;
+      height: 200px;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3);
+    }
+
+    .message, .poem, .letter {
+      display: none;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 192, 203, 0.8);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    img.cat {
+      width: 140px;
+      margin-top: 15px;
+      border-radius: 12px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: linear-gradient(to right, #ff66a3, #ff99cc);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.4s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #ff99cc, #ff66a3);
+    }
+
+    .open .flap {
+      transform: rotateX(180deg);
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<h2>A Birthday Letter Awaits...</h2>
+
+<div class="envelope" onclick="openEnvelope()" id="envelope">
+  <div class="flap"></div>
+  <div class="body"></div>
+</div>
+
+<div class="message" id="message">
+  <h2>Happy 17th Birthday, Taman 🎉</h2>
+  <img class="cat" src="https://media.giphy.com/media/WXB88TeARFVvi/giphy.gif" alt="Cat Gif" />
+  <p>I made this little letter... because I can't be there to say it myself.</p>
+  <button class="btn" onclick="showPoem()">Read Letter 💌</button>
+</div>
+
+<div class="poem" id="poem">
+  <h2>🌹 17 Wishes for You 🌹</h2>
+  <p style="white-space: pre-wrap;">
+1. May your smile always win.
+2. May your heart never break.
+3. May your parents always be proud.
+4. May no tear fall unnoticed.
+5. May your eyes only shine.
+6. May no fear stay long.
+7. May you bloom in every storm.
+8. May your laugh echo freely.
+9. May your nights be peaceful.
+10. May dreams kiss your sleep.
+11. May school be sweet.
+12. May friendships stay kind.
+13. May my love keep you safe.
+14. May silence never hurt you.
+15. May prayers reach your soul.
+16. May Waheguru walk beside you.
+17. And may we meet again... when it’s time.
+  </p>
+  <button class="btn" onclick="showLetter()">Final Letter ➡️</button>
+</div>
+
+<div class="letter" id="letter">
+  <h2>My Last Birthday Letter</h2>
+  <p style="white-space: pre-wrap;">
+Dear Taman,
+
+Happy 17th birthday.
+Today, I can’t message you. I can’t call. I can’t stand beside you. But I remember. And that’s everything.
+
+You were born on a day the world didn’t notice. But I did.
+This year, I left school. But I never left you. You’re still a part of my every hope.
+
+I’ve made no promises with my mouth. But I’ve made a thousand with my silence.
+I’ll wait. I’ll return. And if God is kind, one day I’ll stand in front of you again.
+
+Until then… remember, even if you forget this site, this boy, this birthday—
+somewhere in this world, someone is loving you quietly.
+
+Forever your Sumit ❤️
+  </p>
+  <img class="cat" src="https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif" />
+  <h3>Goodbye... until our hello again.</h3>
+  <hr style="margin-top: 40px; border: 1px dashed #ff99cc;">
+  <p style="font-style: italic; font-size: 0.95rem; color: #cc0066;">
+    PS: This page was lovingly crafted by ChatGPT to help a young heart express feelings that words often fail to say.
+    Wherever you are, Taman, happy birthday from me too 🌸
+  </p>
+</div>
+
+<script>
+  function openEnvelope() {
+    document.getElementById("envelope").classList.add("open");
+    setTimeout(() => {
+      document.getElementById("message").style.display = "block";
+    }, 1000);
+  }
+  function showPoem() {
+    document.getElementById("message").style.display = "none";
+    document.getElementById("poem").style.display = "block";
+  }
+  function showLetter() {
+    document.getElementById("poem").style.display = "none";
+    document.getElementById("letter").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
